@@ -4,7 +4,7 @@ import main.java.com.hw3OOP.vertex.Vertex3D;
 
 public class SquarePyramid extends SpaceShape {
     Vertex3D vertex3D;
-    double baseWidth, pyramidHeight;
+    private double baseWidth, pyramidHeight;
 
     public SquarePyramid(int x, int y, int z, double baseWidth, double pyramidHeight) {
         this.vertex3D = new Vertex3D(x, y, z);

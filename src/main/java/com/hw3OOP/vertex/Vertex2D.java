@@ -1,6 +1,6 @@
 package main.java.com.hw3OOP.vertex;
 
-public class Vertex2D {
+public class Vertex2D implements Vertex {
     private int x;
     private int y;
 
@@ -14,19 +14,9 @@ public class Vertex2D {
         return x;
     }
 
-    public void setX(int x) {
-
-        this.x = x;
-    }
-
     public int getY() {
 
         return y;
-    }
-
-    public void setY(int y) {
-
-        this.y = y;
     }
 
     @Override

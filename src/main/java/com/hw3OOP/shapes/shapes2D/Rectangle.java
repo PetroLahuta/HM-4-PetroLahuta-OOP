@@ -1,13 +1,14 @@
 package main.java.com.hw3OOP.shapes.shapes2D;
 
+import main.java.com.hw3OOP.vertex.Vertex;
 import main.java.com.hw3OOP.vertex.Vertex2D;
 
 public class Rectangle extends PlaneShape {
-    Vertex2D vertex2D;
-    double width, height;
+    private Vertex vertex;
+    private double width, height;
 
     public Rectangle(int aX, int aY, double width, double height) {
-        this.vertex2D = new Vertex2D(aX, aY);
+        this.vertex = new Vertex2D(aX, aY);
         this.width = width;
         this.height = height;
     }
@@ -26,7 +27,7 @@ public class Rectangle extends PlaneShape {
 
     @Override
     public String toString() {
-        return "Прямокутник " + "\nВершина: " + vertex2D
+        return "Прямокутник " + "\nВершина: " + vertex
                 + "\nПериметр  = " + getPerimeter() + "\nПлоща = " + getArea();
     }
 }

@@ -1,14 +1,15 @@
 package main.java.com.hw3OOP.shapes.shapes2D;
 
+import main.java.com.hw3OOP.vertex.Vertex;
 import main.java.com.hw3OOP.vertex.Vertex2D;
 
 public class Circle extends PlaneShape {
 
-    Vertex2D vertex2D;
-    double radius;
+    private Vertex vertex;
+    private double radius;
 
     public Circle(int aX, int aY, double radius) {
-        this.vertex2D = new Vertex2D(aX, aY);
+        this.vertex = new Vertex2D(aX, aY);
         this.radius = radius;
     }
 
@@ -26,7 +27,7 @@ public class Circle extends PlaneShape {
 
     @Override
     public String toString() {
-        return "Круг" + "\nВершина" + vertex2D + "\nПериметр  = "
+        return "Круг" + "\nВершина" + vertex + "\nПериметр  = "
                 + getPerimeter() + "\nПлоща = " + getArea();
     }
 }

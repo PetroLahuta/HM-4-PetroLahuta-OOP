@@ -3,9 +3,9 @@ package main.java.com.hw3OOP.shapes.shapes2D;
 import main.java.com.hw3OOP.vertex.Vertex2D;
 
 public class Triangle extends PlaneShape {
-    Vertex2D a;
-    Vertex2D b;
-    Vertex2D c;
+    private Vertex2D a;
+    private Vertex2D b;
+    private Vertex2D c;
 
     private double ab;
     private double bc;

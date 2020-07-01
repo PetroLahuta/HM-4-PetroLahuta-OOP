@@ -4,7 +4,7 @@ import main.java.com.hw3OOP.vertex.Vertex3D;
 
 public class Sphere extends SpaceShape {
     Vertex3D vertex3D;
-    double radius;
+    private double radius;
 
     public Sphere(int aX, int aY, int aZ, double radius) {
         this.vertex3D = new Vertex3D(aX, aY, aZ);
