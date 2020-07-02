@@ -1,13 +1,14 @@
 package main.java.com.hw3OOP.shapes.shapes3D;
 
+import main.java.com.hw3OOP.vertex.Vertex;
 import main.java.com.hw3OOP.vertex.Vertex3D;
 
 public class Cuboid extends SpaceShape {
-    Vertex3D vertex3D;
+    private Vertex vertex;
     private double width, height, depth;
 
     public Cuboid(int aX, int aY, int aZ, double width, double height, double depth) {
-        this.vertex3D = new Vertex3D(aX, aY, aZ);
+        this.vertex = new Vertex3D(aX, aY, aZ);
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -27,7 +28,7 @@ public class Cuboid extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Кубоїд" + "\nВершини: " + vertex3D + "\nширина = " + width + "\nВисота = " + height
+        return "Кубоїд" + "\nВершини: " + vertex + "\nширина = " + width + "\nВисота = " + height
                 + "\nГлибина = " + depth + "\nОб'єм = " + getVolume() + "\nПлоща = " + getArea();
     }
 }

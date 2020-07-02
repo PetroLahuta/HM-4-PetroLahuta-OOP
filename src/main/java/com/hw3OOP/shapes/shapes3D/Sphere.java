@@ -1,13 +1,14 @@
 package main.java.com.hw3OOP.shapes.shapes3D;
 
+import main.java.com.hw3OOP.vertex.Vertex;
 import main.java.com.hw3OOP.vertex.Vertex3D;
 
 public class Sphere extends SpaceShape {
-    Vertex3D vertex3D;
+    private Vertex vertex;
     private double radius;
 
     public Sphere(int aX, int aY, int aZ, double radius) {
-        this.vertex3D = new Vertex3D(aX, aY, aZ);
+        this.vertex = new Vertex3D(aX, aY, aZ);
         this.radius = radius;
     }
 
@@ -25,7 +26,7 @@ public class Sphere extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Сфера" + "\nВершина" + vertex3D + "\nОб'єм = " + getVolume()
+        return "Сфера" + "\nВершина" + vertex + "\nОб'єм = " + getVolume()
                 + "\nПлоща = " + getArea();
     }
 }
