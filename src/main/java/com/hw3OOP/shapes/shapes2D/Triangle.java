@@ -2,19 +2,18 @@ package main.java.com.hw3OOP.shapes.shapes2D;
 
 import main.java.com.hw3OOP.vertex.Vertex2D;
 
-public class Triangle extends PlaneShape {
-    private Vertex2D a;
-    private Vertex2D b;
-    private Vertex2D c;
+import java.util.Arrays;
 
+public class Triangle extends PlaneShape {
     private double ab;
     private double bc;
     private double ca;
 
-    public Triangle(int aX, int aY, int bX, int bY, int cX, int cY) {
-        this.a = new Vertex2D(aX, aY);
-        this.b = new Vertex2D(bX, bY);
-        this.c = new Vertex2D(cX, cY);
+    public Triangle(Vertex2D a, Vertex2D b, Vertex2D c) {
+        super(Arrays.asList(a, b, c));
+        this.ab = ab;
+        this.bc = bc;
+        this.ca = ca;
 
         ab = distanceBetweenTwoVertices(a, b);
         bc = distanceBetweenTwoVertices(b, c);
@@ -35,7 +34,7 @@ public class Triangle extends PlaneShape {
 
     @Override
     public String toString() {
-        return "Трикутник " + "\nВершина A: " + a + "\nВершина B: " + b
-                + "\nВершина C: " + c + "\nПериметр = " + getPerimeter() + "\nПлоща = " + getArea();
+        return "Трикутник " + "\nВершина A: " + ab + "\nВершина B: " + bc
+                + "\nВершина C: " + ca + "\nПериметр = " + getPerimeter() + "\nПлоща = " + getArea();
     }
 }

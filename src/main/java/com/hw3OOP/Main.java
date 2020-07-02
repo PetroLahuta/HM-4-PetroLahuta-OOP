@@ -7,6 +7,8 @@ import main.java.com.hw3OOP.shapes.shapes2D.Triangle;
 import main.java.com.hw3OOP.shapes.shapes3D.Cuboid;
 import main.java.com.hw3OOP.shapes.shapes3D.Sphere;
 import main.java.com.hw3OOP.shapes.shapes3D.SquarePyramid;
+import main.java.com.hw3OOP.vertex.Vertex2D;
+import main.java.com.hw3OOP.vertex.Vertex3D;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +17,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Triangle triangle = new Triangle(2, 3, 2, 40, 20, 3);
-        Rectangle rectangle = new Rectangle(2, 5, 20, 9);
-        Circle circle = new Circle(2, 4, 4);
-        SquarePyramid squarePyramid = new SquarePyramid(8, 8, 8, 20, 31);
-        Cuboid cuboid = new Cuboid(4, 4, 4, 15, 10, 4);
-        Sphere sphere = new Sphere(13, 13, 13, 4);
+        Triangle triangle = new Triangle(new Vertex2D(2, 3), new Vertex2D(2, 40),
+                new Vertex2D(20, 3));
+        Rectangle rectangle = new Rectangle(new Vertex2D(2, 5), 20, 9);
+        Circle circle = new Circle(new Vertex2D(2, 4), 4);
+        SquarePyramid squarePyramid = new SquarePyramid(new Vertex3D(8, 8, 8),
+                20, 31);
+        Cuboid cuboid = new Cuboid(new Vertex3D(4, 4, 4), 15, 10, 4);
+        Sphere sphere = new Sphere(new Vertex3D(13, 13, 13), 4);
 
         List<Shape> shapes = new ArrayList<>();
         shapes.add(triangle);

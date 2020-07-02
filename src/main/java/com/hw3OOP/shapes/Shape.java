@@ -16,5 +16,16 @@ public abstract class Shape {
                 + Math.pow((a.getZ() - b.getZ()), 2));
     }
 
-    List<Vertex> allVertex;
+    private List<Vertex> Vertex;
+
+    public Shape(List<Vertex> Vertex) {
+        this.Vertex = Vertex;
+    }
+
+    @Override
+    public String toString() {
+        return "main.java.com.hw3OOP.shapes.Shape{" +
+                "Vertex=" + Vertex +
+                '}';
+    }
 }
